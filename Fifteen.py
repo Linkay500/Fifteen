@@ -59,12 +59,12 @@ def Init(event):
         button_field.append([])
     for i in range(size[0]):
         field[0].append(i + 1)
-        button_field[0].append(Button(window, text=str(i + 1), height = "5", width = "10",  font="Arial 10", bg = '#e3cccc'))
+        button_field[0].append(Button(window, text=str(i + 1), height = "2", width = "5", font="Arial 20", bg = '#e3cccc', state="disabled"))
         button_field[0][i].grid(column = i, row=0)
     for i in range(size[0] - 1):
         for j in range(size[0]):
             field[i + 1].append(field[i][j] + size[0])
-            button_field[i + 1].append(Button(window, text=str(field[i + 1][j]), height = "5", width = "10",  font="Arial 10", bg = '#e3cccc'))
+            button_field[i + 1].append(Button(window, text=str(field[i + 1][j]), height = "2", width = "5", font="Arial 20", bg = '#e3cccc', state="disabled"))
             button_field[i + 1][j].grid(column = j, row=i + 1)
     button_field[size[0] - 1][size[0] - 1]['text'] = "*"
     field[size[0] - 1][size[0] - 1] = "*"
